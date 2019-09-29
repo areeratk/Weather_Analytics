@@ -95,7 +95,7 @@ def tobs():
 @app.route("/api/v1.0/<start>")
 def start(start):
    # Format date
-   start_date = pd.to_datetime(start).strftime("%Y-%m-%d")
+   start_date = pd.to_datetime(start).strftime('%Y-%m-%d')
    """Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start"""
    # Select the values to query
    sel = [func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
